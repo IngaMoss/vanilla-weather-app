@@ -62,7 +62,7 @@ function displayCelsiusTemperature(event) {
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-search("New York");
+search("Zurich");
 
 let celsiusTemperature = null;
 

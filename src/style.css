@@ -1,16 +1,32 @@
 body{
 font-family: Google Sans,arial,sans-serif;
 }
-
+input.btn {
+color: rgb(233, 235, 236);  
+background-color: rgb(69, 69, 71);  
+}
+input {
+            box-shadow: rgb(69, 69, 71) 0px 8px 8px 0;
+            display: block;
+            border: none;
+            color: rgb(93, 94, 95);
+            background-color: #e0dbe0;
+            transition: all 200ms ease;
+            cursor: pointer;
+            line-height: 22px;         
+}
 h1 {
 
     color: #202124;
     font-weight: normal;
     font-size: 22px;
     line-height: 26px; 
-    margin-bottom: 0;  
+    margin-bottom: 0;
+    margin-top: 30px;  
 }
+
 ul {
+    
     margin: 0;
     padding: 0;
 }
@@ -18,7 +34,7 @@ li{
     list-style: none;
     font-weight: normal;
     color: #70757a;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
     
 }
