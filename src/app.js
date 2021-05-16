@@ -52,6 +52,24 @@ function getForecast(cordinates) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${cordinates.lat}&lon=${cordinates.lon}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(displayForecast);
 }
+
+
+let button = document.querySelector("button");
+button.addEventListener("click", showGeo);
+
+function showGeo() {
+    navigator.geolocation.getCurrentPosition(showPosition);
+}
+function showPosition(position) {
+    let apiKey = "6a4eedc94ba63bc335cf63285a0c725f";
+    let units = "metric";
+    let lati = position.coords.latitude;
+    let longi = position.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayTemperature);
+}
+
+
 function displayTemperature(response) {
     let temperatureElement = document.querySelector("#temperature");
     celsiusTemperature = response.data.main.temp;

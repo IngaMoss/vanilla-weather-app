@@ -15,6 +15,19 @@ input {
             cursor: pointer;
             line-height: 22px;         
 }
+button {    box-shadow: rgb(69, 69, 71) 0px 8px 8px 0;
+            position: relative;
+            left: 437px;
+            top: 1 px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            color: rgb(93, 94, 95);
+            background-color: #e0dbe0;
+            transition: all 200ms ease;
+            cursor: pointer;
+            line-height: 22px;    
+}
 h1 {
 
     color: #202124;
@@ -70,10 +83,6 @@ li:first-letter {
     position: relative;
     font-size: 16px;
     top: -34px;
-}
-.weather-temperature .active {
-    color: rgb(33, 33, 33);
-    cursor: default;
 }
 .weather-forecast {
     margin-top: 20px;
