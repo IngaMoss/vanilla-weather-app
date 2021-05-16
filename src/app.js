@@ -12,6 +12,31 @@ function formatDate(timestamp) {
     let day = days[date.getDay()];
     return `${day} ${hours}:${minutes}`;
 }
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+
+    let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let forecastHTML = `<div class="row">`;
+    days.forEach(function (day) {
+        forecastHTML = forecastHTML + `
+    
+        <div class="col-2">
+            <div class="weather-forecast-date">
+                ${day}
+            </div>
+            <br>
+                <img src="" alt="" width="36">
+            <br>
+            <div class="weather-forecast-temperatures"> <span
+                 class="weather-forecast-temperature-max">19°</span><span
+                 class="weather-forecast-temperature-min">13°</span>
+            </div>
+        </div>`;
+    });
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+};
+
 function displayTemperature(response) {
     let temperatureElement = document.querySelector("#temperature");
     celsiusTemperature = response.data.main.temp;
@@ -61,8 +86,9 @@ function displayCelsiusTemperature(event) {
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-
+displayForecast();
 search("Zurich");
+
 
 let celsiusTemperature = null;
 
